@@ -292,12 +292,14 @@ public class RulerItemView extends View {
     public void setVedioTimeSlot(List<TimeSlot> vedioTimeSlot) {
         this.vedioTimeSlot.clear();
         this.vedioTimeSlot.addAll(vedioTimeSlot);
-        postInvalidate();//重绘
+//        postInvalidate();//重绘
+        invalidate();
     }
 
     public void setViewHeight(int viewHeight) {
         this.viewHeight = viewHeight;
 //        ELog.e("设置高度了"+viewHeight);
-        postInvalidate();
+//        postInvalidate();//重绘
+        invalidate();
     }
 }
